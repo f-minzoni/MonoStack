@@ -20,7 +20,8 @@ namespace NancyDemo
         protected override void ConfigureRequestContainer(
             Nancy.TinyIoc.TinyIoCContainer container, Nancy.NancyContext context)
         {
-            base.ConfigureRequestContainer(container, context);           
+            base.ConfigureRequestContainer(container, context);
+            container.Register<IMyContext>(new MyContext());
         }
     }
 }
