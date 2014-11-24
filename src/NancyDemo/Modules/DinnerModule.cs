@@ -13,12 +13,31 @@ namespace NancyDemo
 {
     public class DinnerModule : NancyModule
     {
-        public DinnerModule(IDinnerService svc)
+        public DinnerModule(IDinnerService svc, ILikeService like)
             : base("/dinner")
         {
             Get["/"] = x =>
             {
                 return Response.AsJson<object>(svc.GetAll());
+            };
+
+            Get["/{id:int}/likes"] = parameters =>
+            {
+                int dinnerId = parameters.id;
+                var likes = like.GetAllByDinner(dinnerId);
+                return Response.AsJson("Count:" + likes.Count());                
+            };
+
+            Post["/{id:int}/like"] = parameters =>
+            {
+                var dinner = svc.Get(parameters.id);
+                if (dinner != null)
+                    like.Add(new Like
+                    {
+                        Dinner = dinner
+                    });
+
+                return HttpStatusCode.OK;
             };
 
             Post["/"] = _ =>

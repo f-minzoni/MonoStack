@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace NancyDemo.Data
 {
-    public class Repository<TEntity> : IRepository<TEntity>
-
-        where TEntity : class
+    public abstract class Repository<TEntity> : IRepository<TEntity>  where TEntity : class, new()
     {
         protected IDataContext Context;
         private bool shareContext = false;
@@ -59,7 +57,7 @@ namespace NancyDemo.Data
 
         public bool Contains(Expression<Func<TEntity, bool>> predicate)
         {
-            return Entities.Count(predicate) > 0;
+            return Entities.Any(predicate);
         }
 
         public virtual TEntity Find(params object[] keys)

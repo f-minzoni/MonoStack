@@ -12,7 +12,7 @@ namespace NancyDemo
     {
         static void Main(string[] args)
         {
-            var uri = "http://localhost:8889";
+            var uri = "http://localhost:8888";
             Console.WriteLine(uri);
             // initialize an instance of NancyHost (found in the Nancy.Hosting.Self package)
             var host = new NancyHost(new Uri(uri));

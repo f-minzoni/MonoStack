@@ -48,6 +48,12 @@
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
@@ -71,14 +77,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\MyNancyBootStrapper.cs" />
+    <Compile Include="Data\Contracts\ILikeService.cs" />
     <Compile Include="Data\Contracts\IDataContext.cs" />
     <Compile Include="Data\Contracts\IDinnerService.cs" />
     <Compile Include="Data\Contracts\IRepository.cs" />
     <Compile Include="Data\Contracts\IUnitOfWork.cs" />
     <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\MongoRepository.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Data\Services\DinnerService.cs" />
+    <Compile Include="Data\Services\LikeService.cs" />
     <Compile Include="Models\Dinner.cs" />
+    <Compile Include="Models\Like.cs" />
+    <Compile Include="Models\MongoEntity.cs" />
     <Compile Include="Modules\DinnerModule.cs" />
     <Compile Include="Modules\HelloModule.cs" />
     <Compile Include="program.cs" />

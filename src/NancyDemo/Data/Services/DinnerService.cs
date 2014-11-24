@@ -9,6 +9,7 @@ namespace NancyDemo.Data
 {
     public class DinnerService : Repository<Dinner>, IDinnerService
     {
+
         public Dinner Get(int dinnerId)
         {
             return base.Find(dinnerId);
