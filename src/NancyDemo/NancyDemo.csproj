@@ -71,9 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\MyNancyBootStrapper.cs" />
-    <Compile Include="Data\IMyContext.cs" />
-    <Compile Include="Data\IUnitOfWork.cs" />
-    <Compile Include="Data\MyContext.cs" />
+    <Compile Include="Data\Contracts\IDataContext.cs" />
+    <Compile Include="Data\Contracts\IDinnerService.cs" />
+    <Compile Include="Data\Contracts\IRepository.cs" />
+    <Compile Include="Data\Contracts\IUnitOfWork.cs" />
+    <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Data\Services\DinnerService.cs" />
     <Compile Include="Models\Dinner.cs" />
     <Compile Include="Modules\DinnerModule.cs" />
     <Compile Include="Modules\HelloModule.cs" />
@@ -83,7 +87,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

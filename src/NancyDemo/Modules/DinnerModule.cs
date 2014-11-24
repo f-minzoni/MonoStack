@@ -13,43 +13,33 @@ namespace NancyDemo
 {
     public class DinnerModule : NancyModule
     {
-        public DinnerModule(IMyContext ctx)
+        public DinnerModule(IDinnerService svc)
             : base("/dinner")
         {
             Get["/"] = x =>
             {
-                return Response.AsJson<object>(ctx.Dinners.ToArray());
+                return Response.AsJson<object>(svc.GetAll());
             };
 
             Post["/"] = _ =>
             {
                 Dinner dinner = this.Bind<Dinner>();
-
-                ctx.Dinners.Add(dinner);
-                ctx.SaveChanges();
-
+                svc.Create(dinner);
                 return HttpStatusCode.OK;
             };
 
             Put["/{id:int}"] = parameters =>
             {
                 Dinner dinner = this.Bind<Dinner>();
-
                 dinner.Id = parameters.id;
-                ctx.Dinners.Attach(dinner);
-                ctx.Entry(dinner).State = EntityState.Modified;
-                ctx.SaveChanges();
+                svc.Update(dinner);
 
                 return HttpStatusCode.OK;
             };
 
             Delete["/{id:int}"] = x =>
             {
-                var dinner = new Dinner() { Id = x.id };
-                ctx.Entry(dinner).State = EntityState.Deleted;
-
-                ctx.SaveChanges();
-
+                svc.Delete(x.id);
                 return HttpStatusCode.OK;
             };
         }

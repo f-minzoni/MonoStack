@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace NancyDemo.Data
 {
-    public interface IMyContext : IUnitOfWork
-    {
-        DbSet<Dinner> Dinners { get; set; }
-
+    public interface IDataContext : IUnitOfWork
+    {        
         DbEntityEntry Entry(object entity);
+
+        IDbSet<TEntity> Set<TEntity>() where TEntity : class;
     }
 }

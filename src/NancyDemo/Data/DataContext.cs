@@ -11,9 +11,9 @@ using NancyDemo.Models;
 
 namespace NancyDemo.Data
 {    
-    public class MyContext : DbContext, IMyContext
+    public class DataContext : DbContext, IDataContext
     {
-        public MyContext() : base("name=MyEntities") { }
+        public DataContext() : base("name=MyEntities") { }
 
         public DbSet<Dinner> Dinners { get; set; }
 

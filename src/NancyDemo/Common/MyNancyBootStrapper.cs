@@ -13,15 +13,14 @@ namespace NancyDemo
         protected override void ConfigureApplicationContainer(
             Nancy.TinyIoc.TinyIoCContainer container)
         {
-            base.ConfigureApplicationContainer(container);
-            container.Register<IMyContext>(new MyContext());
+            base.ConfigureApplicationContainer(container);            
         }
 
         protected override void ConfigureRequestContainer(
             Nancy.TinyIoc.TinyIoCContainer container, Nancy.NancyContext context)
         {
             base.ConfigureRequestContainer(container, context);
-            container.Register<IMyContext>(new MyContext());
+            container.Register<IDinnerService>(new DinnerService());
         }
     }
 }
