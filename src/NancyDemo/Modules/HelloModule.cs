@@ -11,7 +11,7 @@ namespace NancyDemo
     {
         public HelloModule()
         {
-            Get["/"] = parameters => "Hello World!";
+            Get["/"] = parameters => "Hello Mono!";
         }
     }
 }
