@@ -21,25 +21,6 @@ namespace NancyDemo
                 return Response.AsJson<object>(svc.GetAll());
             };
 
-            Get["/{id:int}/likes"] = parameters =>
-            {
-                int dinnerId = parameters.id;
-                var likes = like.GetAllByDinner(dinnerId);
-                return Response.AsJson("Count:" + likes.Count());                
-            };
-
-            Post["/{id:int}/like"] = parameters =>
-            {
-                var dinner = svc.Get(parameters.id);
-                if (dinner != null)
-                    like.Add(new Like
-                    {
-                        Dinner = dinner
-                    });
-
-                return HttpStatusCode.OK;
-            };
-
             Post["/"] = _ =>
             {
                 Dinner dinner = this.Bind<Dinner>();
@@ -59,6 +40,25 @@ namespace NancyDemo
             Delete["/{id:int}"] = x =>
             {
                 svc.Delete(x.id);
+                return HttpStatusCode.OK;
+            };
+
+            Get["/{id:int}/likes"] = parameters =>
+            {
+                int dinnerId = parameters.id;
+                var likes = like.GetAllByDinner(dinnerId);
+                return Response.AsJson("Count:" + likes.Count());
+            };
+
+            Post["/{id:int}/like"] = parameters =>
+            {
+                var dinner = svc.Get(parameters.id);
+                if (dinner != null)
+                    like.Add(new Like
+                    {
+                        Dinner = dinner
+                    });
+
                 return HttpStatusCode.OK;
             };
         }
