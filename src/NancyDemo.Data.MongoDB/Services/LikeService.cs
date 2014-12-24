@@ -1,5 +1,4 @@
-﻿using NancyDemo.Data.MongoDB;
-using NancyDemo.Domain;
+﻿using NancyDemo.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Data
+namespace NancyDemo.Data.MongoDB
 {
     public class LikeService : MongoRepository<Like>, ILikeService 
     {
