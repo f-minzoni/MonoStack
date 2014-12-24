@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Models
+namespace NancyDemo.Data.EF
 {
-    public class Dinner
+    public interface IUnitOfWork : IDisposable
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        int SaveChanges();
     }
 }

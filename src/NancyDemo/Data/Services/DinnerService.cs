@@ -1,4 +1,5 @@
-﻿using NancyDemo.Models;
+﻿using NancyDemo.Data.EF;
+using NancyDemo.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace NancyDemo.Data
 {
     public class DinnerService : Repository<Dinner>, IDinnerService
-    {
+    {       
 
         public Dinner Get(int dinnerId)
         {

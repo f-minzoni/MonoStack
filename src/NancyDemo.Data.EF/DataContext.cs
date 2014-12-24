@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.Infrastructure;
-using NancyDemo.Models;
+using NancyDemo.Domain;
+using NancyDemo.Data.EF;
 
 namespace NancyDemo.Data
 {    

@@ -2,7 +2,7 @@
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
-using NancyDemo.Models;
+using NancyDemo.Domain;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,9 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Data
+namespace NancyDemo.Data.MongoDB
 {
-    public abstract class MongoRepository<TObject> : IRepository<TObject> where TObject : MongoEntity
+    public abstract class MongoRepository<TObject> where TObject : MongoEntity
     {
         private MongoCollection collection;
 

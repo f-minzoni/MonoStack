@@ -6,22 +6,23 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Data
+namespace NancyDemo.Data.EF
 {
     public abstract class Repository<TEntity> : IRepository<TEntity>  where TEntity : class, new()
     {
         protected IDataContext Context;
-        private bool shareContext = false;
+        private bool shareContext;
 
         public Repository()
         {
             Context = new DataContext();
+            shareContext = false;
         }
 
-        public Repository(IDataContext context)
+        public Repository(IDataContext context, bool shareContext = false)
         {
             Context = context;
-            shareContext = true;
+            this.shareContext = shareContext;
         }
 
         protected IDbSet<TEntity> Entities

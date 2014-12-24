@@ -1,5 +1,5 @@
 ﻿using NancyDemo.Data;
-using NancyDemo.Models;
+using NancyDemo.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

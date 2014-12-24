@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo", "NancyDemo\NancyDemo.csproj", "{9B1759EA-FD4D-4026-9481-4AEFDE12C4CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Data.EF", "NancyDemo.Data.EF\NancyDemo.Data.EF.csproj", "{21350383-C840-4EF8-8812-3718F2A960B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Domain", "NancyDemo.Domain\NancyDemo.Domain.csproj", "{8D1894FB-DA1E-4372-A783-213DB8C91D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Data.MongoDB", "NancyDemo.Data.MongoDB\NancyDemo.Data.MongoDB.csproj", "{180C2C01-A62A-4F04-8AAC-FCB7406C9526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{9B1759EA-FD4D-4026-9481-4AEFDE12C4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B1759EA-FD4D-4026-9481-4AEFDE12C4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B1759EA-FD4D-4026-9481-4AEFDE12C4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21350383-C840-4EF8-8812-3718F2A960B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21350383-C840-4EF8-8812-3718F2A960B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21350383-C840-4EF8-8812-3718F2A960B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21350383-C840-4EF8-8812-3718F2A960B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1894FB-DA1E-4372-A783-213DB8C91D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1894FB-DA1E-4372-A783-213DB8C91D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1894FB-DA1E-4372-A783-213DB8C91D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1894FB-DA1E-4372-A783-213DB8C91D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

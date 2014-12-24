@@ -1,10 +1,9 @@
 ﻿using Nancy;
 using Nancy.ModelBinding;
 using NancyDemo.Data;
-using NancyDemo.Models;
+using NancyDemo.Domain;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;

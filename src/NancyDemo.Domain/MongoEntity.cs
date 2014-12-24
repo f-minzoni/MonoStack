@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Models
+namespace NancyDemo.Domain
 {
     public class MongoEntity
     {
