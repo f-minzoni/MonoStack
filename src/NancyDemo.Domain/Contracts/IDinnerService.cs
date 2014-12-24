@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Data
+namespace NancyDemo.Domain
 {
     public interface IDinnerService
     {

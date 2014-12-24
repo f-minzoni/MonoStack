@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NancyDemo.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NancyDemo.Data.EF
 {
-    public interface IRepository<T> : IDisposable
+    public interface IRepository<T> where T : IEntity
     {
         /// <summary>
         /// Gets all objects from database

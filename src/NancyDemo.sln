@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Domain", "NancyDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Data.MongoDB", "NancyDemo.Data.MongoDB\NancyDemo.Data.MongoDB.csproj", "{180C2C01-A62A-4F04-8AAC-FCB7406C9526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NancyDemo.Data.Dapper", "NancyDemo.Data.Dapper\NancyDemo.Data.Dapper.csproj", "{2A0C6951-816F-478D-B832-6FD372A0E8D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{180C2C01-A62A-4F04-8AAC-FCB7406C9526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0C6951-816F-478D-B832-6FD372A0E8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0C6951-816F-478D-B832-6FD372A0E8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0C6951-816F-478D-B832-6FD372A0E8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0C6951-816F-478D-B832-6FD372A0E8D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

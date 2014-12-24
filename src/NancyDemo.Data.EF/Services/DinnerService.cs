@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NancyDemo.Data
+namespace NancyDemo.Data.EF
 {
     public class DinnerService : Repository<Dinner>, IDinnerService
     {       

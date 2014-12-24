@@ -45,9 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dinner.cs" />
-    <Compile Include="Like.cs" />
-    <Compile Include="MongoEntity.cs" />
+    <Compile Include="Contracts\IDinnerService.cs" />
+    <Compile Include="Contracts\ILikeService.cs" />
+    <Compile Include="Models\Dinner.cs" />
+    <Compile Include="Contracts\IEntity.cs" />
+    <Compile Include="Models\Like.cs" />
+    <Compile Include="Models\MongoEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

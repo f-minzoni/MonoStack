@@ -71,10 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\MyNancyBootStrapper.cs" />
-    <Compile Include="Data\Contracts\ILikeService.cs" />
-    <Compile Include="Data\Contracts\IDinnerService.cs" />
-    <Compile Include="Data\Contracts\IRepository.cs" />
-    <Compile Include="Data\Services\DinnerService.cs" />
     <Compile Include="Data\Services\LikeService.cs" />
     <Compile Include="Modules\DinnerModule.cs" />
     <Compile Include="Modules\HelloModule.cs" />
@@ -84,6 +80,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NancyDemo.Data.Dapper\NancyDemo.Data.Dapper.csproj">
+      <Project>{2a0c6951-816f-478d-b832-6fd372a0e8d0}</Project>
+      <Name>NancyDemo.Data.Dapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NancyDemo.Data.EF\NancyDemo.Data.EF.csproj">
       <Project>{21350383-c840-4ef8-8812-3718f2a960b2}</Project>
       <Name>NancyDemo.Data.EF</Name>
@@ -96,6 +96,9 @@
       <Project>{8d1894fb-da1e-4372-a783-213db8c91d77}</Project>
       <Name>NancyDemo.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Contracts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

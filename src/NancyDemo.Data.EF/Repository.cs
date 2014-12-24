@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NancyDemo.Domain;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NancyDemo.Data.EF
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity>  where TEntity : class, new()
+    public abstract class Repository<TEntity> : IRepository<TEntity>  where TEntity : class, IEntity
     {
         protected IDataContext Context;
         private bool shareContext;
